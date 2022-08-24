@@ -18,7 +18,7 @@ img
 
 //шапка
 .header
-  padding: 0 200px
+  width: 100%
   display: flex
   align-items: center
   height: 160px
@@ -27,6 +27,9 @@ img
   background: #fff
   border-bottom: 1px solid #6A706E
   &-inner
+    max-width: 1540px
+    margin: 0 auto
+    padding: 0 20px
     display: flex
     align-items: center
     justify-content: space-between
@@ -40,6 +43,8 @@ img
       margin-bottom: 3px
       width: 160px
       transition: all .1s
+      display: flex
+      flex-shrink: 0
     &-image
   &-nav
     display: flex
@@ -57,6 +62,7 @@ img
 
   &-menu
     &-button
+      display: none
     &-image
 .main
   &-inner
@@ -95,6 +101,7 @@ img
       max-width: 270px
       max-height: 400px
     &__title
+      margin-top: 24px
       font-family: 'Garamond'
       font-size: 32px
       line-height: 30px
@@ -108,12 +115,12 @@ img
       -webkit-box-orient: vertical
       overflow: hidden
     &__price
-      font-family: 'Gotham Rounded'
+      font-family: 'Montserrat'
       font-size: 32px
       color: #010101
       margin: 40px 0
       small
-        font-family: 'Gotham Rounded'
+        font-family: 'Montserrat'
         font-size: 18px
         color: #010101
     &__buttons
@@ -132,6 +139,9 @@ img
       text-align: center
       text-transform: uppercase
       color: #FFFFFF
+      transition: all .4s
+      &:hover
+        background: #264D38
 .button
   &-minus,&-plus
     height: 64px
@@ -146,14 +156,62 @@ img
   display: flex
   align-items: center
   justify-content: center
-  font-family: 'Gotham Rounded'
+  font-family: 'Montserrat'
   font-size: 24px
   text-align: center
-
   color: #000000
+
+.footer
+  max-width: 1540px
+  margin: 0 auto
+  padding: 0 20px
+  display: flex
+  align-items: center
+  border-top: 1px solid #6A706E
+  margin-top: -1px
+  &-inner
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-logo
+    &-link
+      width: 160px
+      height: 160px
+    &-image
+  &-info
+    display: flex
+    align-items: center
+    flex-direction: column
+  &-phone
+    font-family: 'Montserrat'
+    font-size: 18px
+    line-height: 22px
+    color: #010101
+    margin-bottom: 4px
+  &-desc
+    font-family: 'Montserrat'
+    font-size: 18px
+    line-height: 22px
+    color: #010101
+    text-align: center
+    margin: 0 10px
+    margin-bottom: 16px
+  &-links
+    display: flex
+    align-items: center
+    gap: 30px
+    &__item
+      width: 24px
+      height: 24px
+    &__image
+  &-top
+    &-button
+    &-image
+
 .active
   border-bottom: 1px solid #F96815
 .hidden
-  display: none
+  display: none !important
 
 @import _media

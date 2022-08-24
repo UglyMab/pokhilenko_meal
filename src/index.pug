@@ -7,6 +7,13 @@ html(lang='en')
     title Grace Farm
     link(rel='stylesheet', href='assets/css/style.css')
   body 
+    .mobile-menu.hidden
+      img.mobile-menu-close(src='assets/img/close.svg', alt='')
+      nav.header-nav.mobile-nav
+        a.active(href='') яйца
+        a(href='') мясная продукция
+        a(href='') овощи и зелень
+        a(href='') бакалея
     header.header 
       .header-inner 
         a.header-logo-link(href='') 
@@ -16,7 +23,7 @@ html(lang='en')
           a(href='') мясная продукция
           a(href='') овощи и зелень
           a(href='') бакалея
-        button.header-menu-button.hidden 
+        button.header-menu-button 
           img.header-menu-image(src='assets/img/menu-mobile.svg', alt='')
         button.header-cart-button 
           img.header-cart-image(src='assets/img/cart.svg', alt='')
@@ -74,8 +81,8 @@ html(lang='en')
         a.footer-logo-link(href='') 
           img.footer-logo-image.logo(src='assets/img/logo.png', alt='')
         .footer-info 
-          a.footer-phone(href='') 
-          p.footer-desc 
+          a.footer-phone(href='') +375 (29) 123-45-67
+          p.footer-desc Личное подсобное хозяйство семьи Похиленко
           .footer-links 
             a.footer-links__item(href='') 
               img.footer-links__image(src='assets/img/telegram.svg', alt='')
@@ -85,6 +92,6 @@ html(lang='en')
               img.footer-links__image(src='assets/img/facebook.svg', alt='')
             a.footer-links__item(href='') 
               img.footer-links__image(src='assets/img/instagram.svg', alt='')
-          button.footer-top-button 
-            img.footer-top-image(src='assets/img/top.svg', alt='')
+        button.footer-top-button 
+          img.footer-top-image(src='assets/img/top.svg', alt='')
 script(src='assets/js/main.min.js')
