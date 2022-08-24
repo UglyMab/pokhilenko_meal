@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Grace Farm
+    link(rel='stylesheet', href='assets/css/style.css')
+  body 
+    header.header 
+      .header-inner 
+        a.header-logo-link(href='') 
+          img.header-logo-image.logo(src='assets/img/logo.png', alt='')
+        nav.header-nav
+          a.active(href='') яйца
+          a(href='') мясная продукция
+          a(href='') овощи и зелень
+          a(href='') бакалея
+        button.header-menu-button.hidden 
+          img.header-menu-image(src='assets/img/menu-mobile.svg', alt='')
+        button.header-cart-button 
+          img.header-cart-image(src='assets/img/cart.svg', alt='')
+    main.main 
+      .main-inner 
+        h2.main-title Яйца
+        img.main-image(src='assets/img/boiled-eggs.jpg', alt='')
+        section.products
+          .products-item
+            img.products-item__image(src='assets/img/egg-chicken.jpg', alt='')
+            h3.products-item__title Яйца от пастбищных курочек
+            span.products-item__price 6 <small>BYN</small> / <small>10 шт</small>
+            .products-item__buttons
+              button.button-minus
+                img(src='assets/img/minus.svg', alt='') 
+              span.result 20
+              button.button-plus 
+                img(src='assets/img/plus.svg', alt='')
+            button.products-item__button Добавить в корзину
+          .products-item
+            img.products-item__image(src='assets/img/egg-quail.jpg', alt='')
+            h3.products-item__title Яйца перепелиные
+            span.products-item__price 6 <small>BYN</small> / <small>20 шт</small>
+            .products-item__buttons
+              button.button-minus
+                img(src='assets/img/minus.svg', alt='') 
+              span.result 20
+              button.button-plus 
+                img(src='assets/img/plus.svg', alt='')
+            button.products-item__button Добавить в корзину
+          .products-item
+            img.products-item__image(src='assets/img/egg-chicken.jpg', alt='')
+            h3.products-item__title Яйца от пастбищных курочек
+            span.products-item__price 6 <small>BYN</small> / <small>10 шт</small>
+            .products-item__buttons
+              button.button-minus
+                img(src='assets/img/minus.svg', alt='') 
+              span.result 20
+              button.button-plus 
+                img(src='assets/img/plus.svg', alt='')
+            button.products-item__button Добавить в корзину
+          .products-item
+            img.products-item__image(src='assets/img/egg-quail.jpg', alt='')
+            h3.products-item__title Яйца перепелиные
+            span.products-item__price 6 <small>BYN</small> / <small>20 шт</small>
+            .products-item__buttons
+              button.button-minus
+                img(src='assets/img/minus.svg', alt='') 
+              span.result 20
+              button.button-plus 
+                img(src='assets/img/plus.svg', alt='')
+            button.products-item__button Добавить в корзину
+    footer.footer 
+      .footer-inner 
+        a.footer-logo-link(href='') 
+          img.footer-logo-image.logo(src='assets/img/logo.png', alt='')
+        .footer-info 
+          a.footer-phone(href='') 
+          p.footer-desc 
+          .footer-links 
+            a.footer-links__item(href='') 
+              img.footer-links__image(src='assets/img/telegram.svg', alt='')
+            a.footer-links__item(href='') 
+              img.footer-links__image(src='assets/img/viber.svg', alt='')
+            a.footer-links__item(href='') 
+              img.footer-links__image(src='assets/img/facebook.svg', alt='')
+            a.footer-links__item(href='') 
+              img.footer-links__image(src='assets/img/instagram.svg', alt='')
+          button.footer-top-button 
+            img.footer-top-image(src='assets/img/top.svg', alt='')
+script(src='assets/js/main.min.js')

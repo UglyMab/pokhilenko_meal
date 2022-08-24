@@ -13,6 +13,6 @@ export const style = () => {
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer({}))
     .pipe(sourcemaps.write('/sourcemap'))
-    .pipe(app.gulp.dest('dist/css'))
+    .pipe(app.gulp.dest('dist/assets/css'))
     .pipe(browserSync.stream())
 }
