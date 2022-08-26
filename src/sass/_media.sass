@@ -7,10 +7,55 @@
         font-size: 20px
 
 @media screen and (max-width: 1167px)
+  .total
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    padding: 40px 20px
+    flex-wrap: wrap
+    &-price
+      margin-right: auto
+      width: auto
+      margin-left: 20px
+    &-button
+      margin: 0
   .products
     &-item
       max-width: 50%
+  .delivery
+    &-title
+      text-align: center
 @media screen and (max-width: 968px)
+  .cart
+    &-item
+      &__delete
+        order: 2
+        margin-right: 0
+        margin-left: 36px
+        margin-bottom: 32px
+      &__image
+        order: 1
+        max-width: 720px
+        margin-right: auto
+        width: 80%
+        margin-bottom: 32px
+  .input-block
+  .order
+    order: 1
+    width: 100%
+    border-right: none
+    border-top: none
+  .delivery
+    width: 100%
+    order: 2
+    &-inner
+      flex-direction: column
+      align-items: center
+      &::before
+        display: none
+    &-title
+      font-size: 48px
+
   .header
     &-nav
       display: none
@@ -51,10 +96,59 @@
         padding: 8px 32px
 
 @media screen and (max-width: 700px)
+  .cart
+
+    &-item
+      &__buttons
+        button
+          width: 48px
+          height: 48px
+        span
+          width: 48px
+          height: 48px
+          font-size: 22px
+      &__image
+        max-height: 180px
+      &__delete
+        margin-left: 0
+      &__block
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        height: auto
+        width: 100%
+        margin-bottom: 16px
+      &__title
+        max-width: 100%
   .products
     &-item
       max-width: 100%
+  .hide-sm
+    display: none
+@media screen and (max-width: 560px)
+  .products-item__button
+    margin-top: 16px
 @media screen and (max-width: 480px)
+  .cart-item__image
+    max-width: 75%
+  .cart-headers__item
+    span
+      color: #fff
+      width: 12px
+      display: inline-flex
+      position: relative
+      overflow: hidden
+      &::before
+        background: #264D38
+        width: 10px
+        height: 1px
+        position: absolute
+        content: ''
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+  .input-block
+    height: 180px
   .header
     height: 100px
     top: -20px

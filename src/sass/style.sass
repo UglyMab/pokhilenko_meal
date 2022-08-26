@@ -3,9 +3,12 @@
 html,body
   width: 100%
   scroll-behavior: smooth
+  min-height: 100vh
 body
   position: relative
-a,input,button
+  display: flex
+  flex-direction: column
+a,input,button,textarea
   background: transparent
   outline: transparent
   border: none
@@ -26,6 +29,7 @@ img
   top: -80px
   background: #fff
   border-bottom: 1px solid #6A706E
+  z-index: 2
   &-inner
     max-width: 1540px
     margin: 0 auto
@@ -67,7 +71,12 @@ img
       display: none
     &-image
 .main
+  display: flex
+  flex-grow: 1
+  flex-direction: column
+  position: relative
   &-inner
+    width: 100%
     display: flex
     align-items: center
     flex-direction: column
@@ -86,6 +95,7 @@ img
 .products
   display: flex
   max-width: 1170px
+  width: 100%
   margin: 0 auto
   flex-wrap: wrap
   border-top: 1px solid #6A706E
@@ -164,6 +174,297 @@ img
   text-align: center
   color: #000000
 
+.cart
+  display: flex
+  flex-direction: column
+  width: 100%
+  // align-items: center
+  margin: 0 auto
+  padding: 40px 0
+  border-bottom: 1px solid #6A706E
+  &-title
+    border-bottom: 1px solid #6A706E
+    width: 100%
+  &-inner
+  &-headers
+    display: flex
+    padding-left: 300px
+    max-width: 1170px
+    width: 100%
+    margin: 0 auto
+    &__item
+      font-family: 'Garamond'
+      font-size: 24px
+      line-height: 30px
+      text-transform: uppercase
+      color: #264D38
+      &:nth-child(1)
+        text-align: left
+  &-item
+    margin: 0 auto
+    display: flex
+    align-items: center
+    width: 100%
+    max-width: 1170px
+    flex-wrap: wrap
+    padding: 40px 20px
+    &__block
+      display: flex
+      flex-direction: column
+      width: auto
+      margin: 0 auto
+      height: 260px
+      order: 3
+      p
+        margin-bottom: auto
+        text-align: center
+    &__delete
+      height: 64px
+      width: 64px
+      margin-right: 36px
+      cursor: pointer
+      order: 1
+    &__image
+      max-width: 136px
+      max-height: 200px
+      margin-right: 64px
+      order: 2
+    &__title
+      font-family: 'Garamond'
+      font-size: 24px
+      line-height: 24px
+      color: #264D38
+      width: 100%
+      max-width: 200px
+      margin-bottom: auto
+    &__price
+      font-family: 'Montserrat'
+      font-size: 32px
+      color: #010101
+      max-width: 150px
+      width: 100%
+      margin-bottom: auto
+      small
+        font-size: 18px
+    &__total
+      font-family: 'Montserrat'
+      font-size: 32px
+      color: #010101
+      width: 100%
+      max-width: 150px
+      margin-bottom: auto
+      small
+        font-size: 18px
+    &__buttons
+      margin-bottom: auto
+.total
+  display: flex
+  align-items: flex-end
+  flex-direction: column
+  padding: 40px 0
+  width: 100%
+  max-width: 1170px
+  margin: 0 auto
+  &-title
+    font-family: 'Garamond'
+    font-weight: 700
+    font-size: 24px
+    line-height: 30px
+    text-align: right
+    text-transform: uppercase
+    color: #264D38
+  &-price
+    font-family: 'Montserrat'
+    font-size: 32px
+    color: #010101
+    max-width: 150px
+    width: 100%
+    text-align: right
+    small
+      font-size: 18px
+
+.delivery
+  width: 68%
+  &-inner
+    max-width: 1170px
+    margin: 0 auto
+    display: flex
+    width: 100%
+    align-items: flex-start
+    flex-direction: row
+    &::before
+      position: absolute
+      content: ''
+      border-bottom: 1px solid #6A706E
+      top: 128px
+      left: 0
+      width: 100vw
+  &-title
+    text-align: left
+    font-size: 32px
+  &-form
+    padding: 40px 20px
+    border: 1px solid #6A706E
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-inner
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      width: 300px
+    &__label
+      font-family: 'Montserrat'
+      font-weight: 400
+      font-size: 16px
+      color: #010101
+      margin-bottom: 4px
+    &__input
+      background: #FFFFFF
+      border: 1px solid #6A706E
+      padding: 13px 16px
+      width: 100%
+      font-family: 'Montserrat'
+      font-size: 16px
+      color: #010101
+      margin-bottom: 16px
+      resize: none
+      &::placeholder
+        font-size: 16px
+        color: #6A706E
+    &__button
+      margin-bottom: 24px
+    &__desc
+
+      font-family: 'Montserrat'
+      font-size: 14px
+      color: #6A706E
+      margin-top: -14px
+      span
+        font-size: 32px
+        line-height: 32px
+        color: #F96815
+        vertical-align: middle
+.input-block
+  display: flex
+  flex-direction: column
+  height: 90px
+  flex-wrap: wrap
+  width: 100%
+  margin-top: 4px
+  input,label
+    display: flex
+    max-width: 105px
+    margin-right: 16px
+
+.phone-wrapper
+  display: flex
+  position: relative
+  input
+    border-left: none
+.select
+  &-group
+    display: flex
+    gap: 24px
+    position: relative
+
+    .select-list
+      &:last-child
+        left: auto
+        right: 0
+    .select-placeholder
+      width: 110px
+  &-list
+    position: absolute
+    top: 45px
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 70px
+    background: #fff
+    z-index: 3
+  &-item
+    background: #FFFFFF
+    border: 1px solid #6A706E
+    padding: 8px 16px
+    font-family: 'Montserrat'
+    font-size: 16px
+    color: #6A706E
+    width: 100%
+    border-bottom: none
+    text-align: center
+    cursor: pointer
+    &:last-child
+      border-bottom: 1px solid #6A706E
+  &-placeholder
+    text-align: center
+    cursor: pointer
+    background: #FFFFFF
+    border: 1px solid #6A706E
+    padding: 13px 16px
+    font-family: 'Montserrat'
+    font-size: 16px
+    color: #6A706E
+    margin-bottom: 16px
+    width: 70px
+.require
+  position: relative
+  &::after
+    position: absolute
+    content: '*'
+    top: 0
+    right: -10px
+    color: #F96815
+
+.order
+  display: flex
+  width: 32%
+  flex-direction: column
+  &-inner
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 40px
+    border: 1px solid #6A706E
+    border-left: none
+    position: relative
+
+  &-product
+    &-title
+      font-family: 'Garamond'
+      font-size: 24px
+      line-height: 24px
+      text-align: center
+      color: #264D38
+      margin-bottom: 8px
+    &-count
+      font-family: 'Montserrat'
+      font-size: 24px
+      line-height: 30px
+      text-align: center
+      color: #010101
+      span
+        font-size: 38px
+      small
+        font-size: 18px
+  &-total
+    &-title
+      font-family: 'Garamond'
+      font-weight: 700
+      font-size: 24px
+      line-height: 30px
+      text-align: center
+      text-transform: uppercase
+      color: #264D38
+      margin-top: 80px
+    &-price
+      font-family: 'Montserrat'
+      font-size: 38px
+      text-align: center
+      color: #010101
+      small
+        font-size: 18px
 .footer
   width: 100%
   display: flex

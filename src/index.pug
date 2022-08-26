@@ -25,10 +25,114 @@ html(lang='en')
           a(href='') бакалея
         button.header-menu-button 
           img.header-menu-image(src='assets/img/menu-mobile.svg', alt='')
-        button.header-cart-button 
+        button#cartOpen.header-cart-button 
           img.header-cart-image(src='assets/img/cart.svg', alt='')
     main.main 
-      .main-inner 
+      .main-inner.delivery-inner.hidden
+        section.delivery
+          h2.main-title.delivery-title Данные для доставки
+          form.delivery-form
+            .delivery-form-inner 
+              label.delivery-form__label.require Имя
+              input.delivery-form__input(type='text', placeholder='Владимир')
+              label.delivery-form__label.require Телефон
+              .phone-wrapper
+                input.hidden(type='text')
+                .select-placeholder +375
+                ul.select-list.hidden
+                  li.select-item 123
+                  li.select-item 123
+                  li.select-item 123
+                  li.select-item 123
+                  li.select-item 123
+                input.delivery-form__input(type='tel')
+              label.delivery-form__label.require Город
+              input.delivery-form__input(type='text', placeholder='Минск')
+              label.delivery-form__label.require Адрес
+              input.delivery-form__input(
+                type='text',
+                placeholder='Название улицы, номер дома'
+              )
+              span.delivery-form__desc Введите название улицы и номер дома
+              .input-block
+                label.delivery-form__label Подъезд
+                input.delivery-form__input(type='text')
+                label.delivery-form__label Этаж
+                input.delivery-form__input(type='text')
+                label.delivery-form__label № квартиры
+                input.delivery-form__input(type='text')
+              label.delivery-form__label.require Удобное время 1
+              .select-group
+                input.hidden(type='text')
+                .select-placeholder с 00:00
+                ul.select-list.hidden
+                  li.select-item 09:00
+                  li.select-item 10:00
+                  li.select-item 11:00
+                  li.select-item 12:00
+                  li.select-item 13:00
+              label.delivery-form__label.require Удобное время 2
+              .select-group
+                input.hidden(type='text')
+                .select-placeholder с 00:00
+                ul.select-list.hidden
+                  li.select-item 09:00
+                  li.select-item 10:00
+                  li.select-item 11:00
+                  li.select-item 12:00
+                  li.select-item 13:00
+                input.hidden(type='text')
+                .select-placeholder до 00:00
+                ul.select-list.hidden
+                  li.select-item 09:00
+                  li.select-item 10:00
+                  li.select-item 11:00
+                  li.select-item 12:00
+                  li.select-item 13:00
+              label.delivery-form__label Дополнительная информация
+              textarea.delivery-form__input(
+                cols='30',
+                rows='4',
+                placeholder='Введите текст'
+              )
+              span.delivery-form__desc <span>*</span>— Поля обязательные для заполнения
+              button.delivery-form__button.products-item__button Завершить заказ
+        section.order
+          h2.main-title.delivery-title Ваш заказ
+          .order-inner
+            h4.order-product-title Яйца от пастбищных курочек
+            span.order-product-count 10 х <span>6</span> <small>BYN</small>
+            h4.order-total-title общая сумма
+            span.order-total-price 6 <small>BYN</small>
+
+      .main-inner.cart-inner.hidden
+        h2.main-title.cart-title Корзина
+        section.cart
+          .cart-item
+            img.cart-item__delete(src='assets/img/close.svg', alt='')
+            img.cart-item__image(src='assets/img/egg-chicken.jpg', alt='')
+            .cart-item__block 
+              p.cart-headers__item.hide-sm Товар
+              h3.cart-item__title Яйца от пастбищных курочек
+            .cart-item__block 
+              p.cart-headers__item Цена
+              span.cart-item__price 6 <small>BYN</small>
+            .cart-item__block 
+              p.cart-headers__item Кол<span>ичест</span>во
+              .cart-item__buttons.products-item__buttons
+                button.button-minus
+                  img(src='assets/img/minus.svg', alt='') 
+                span.result(data-count='10') 20
+                button.button-plus 
+                  img(src='assets/img/plus.svg', alt='')
+            .cart-item__block 
+              p.cart-headers__item Итого
+              span.cart-item__total 6 <small>BYN</small>
+        section.total
+          h4.total-title общая сумма
+          span.total-price 6 <small>BYN</small>
+          button#deliveryOpen.total-button.products-item__button оформить заказ
+      .main-inner
         h2.main-title Яйца
         img.main-image(src='assets/img/boiled-eggs.jpg', alt='')
         section.products
@@ -39,7 +143,7 @@ html(lang='en')
             .products-item__buttons
               button.button-minus
                 img(src='assets/img/minus.svg', alt='') 
-              span.result 20
+              span.result(data-count='10') 20
               button.button-plus 
                 img(src='assets/img/plus.svg', alt='')
             button.products-item__button Добавить в корзину
@@ -50,7 +154,7 @@ html(lang='en')
             .products-item__buttons
               button.button-minus
                 img(src='assets/img/minus.svg', alt='') 
-              span.result 20
+              span.result(data-count='10') 20
               button.button-plus 
                 img(src='assets/img/plus.svg', alt='')
             button.products-item__button Добавить в корзину
@@ -61,7 +165,7 @@ html(lang='en')
             .products-item__buttons
               button.button-minus
                 img(src='assets/img/minus.svg', alt='') 
-              span.result 20
+              span.result(data-count='10') 20
               button.button-plus 
                 img(src='assets/img/plus.svg', alt='')
             button.products-item__button Добавить в корзину
@@ -72,7 +176,7 @@ html(lang='en')
             .products-item__buttons
               button.button-minus
                 img(src='assets/img/minus.svg', alt='') 
-              span.result 20
+              span.result(data-count='10') 20
               button.button-plus 
                 img(src='assets/img/plus.svg', alt='')
             button.products-item__button Добавить в корзину
